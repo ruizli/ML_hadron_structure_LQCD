@@ -1,0 +1,11 @@
+# Gradient Boosting parameters
+# #estimators
+nestimator: 100
+# learning rate
+lnrate: 0.1
+# loss function
+lossfunc: ls
+# maximum decision tree depth
+max_depth: 3
+# optimization stop tolerance
+lntol: 0.001
