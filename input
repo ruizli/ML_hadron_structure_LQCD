@@ -1,0 +1,49 @@
+# ML input file
+# data format and fitting structure: pdf, raw
+format: pdf
+ddir: ${data_dir}
+# iff 'ddir' is not specified
+dfile.x: $data_file_X
+dfile.y: $data_file_Y
+# (re)sampling: Bootstrap (BS), Jackknife (JK), Random (RD)
+tdset: BS 
+# total number of fits
+nfit: 500
+# #training data
+ntrn: 60
+# #bias-correction data
+nbc: 180
+# data bin size
+binsize: 1
+# #sources per config
+nsrc: 4
+# fitting parameter directory (w. filename same as 'mlml')
+pdir: ${MLparam_dir}
+# output directory
+odir: ${output_dir}
+# ML algorithm: Gradient Boosting (GB), Decistion Tree (DT), (TODO) Random Foreast (RF)
+mlml: GB
+# true / false for enabling /disabling post-fit data analysis
+analysis: true
+# list of Y (predict) data momentum
+momentum_Y: [ 3, 4, 5 ]
+# list of X (train) data momentum
+momentum_X: [ 3, 3, [3,4] ]
+# list of Y data Wilson-link length
+z_Y:        [ [4, -4], 0, 0 ]
+# list of X data Wilson-link length
+z_X:        [  [0, 1, 2, -1, -2], 0, 0]
+# list of Y time slices (optional, not specified for selecting data according to 'emax')
+ts_Y:       
+# list (or maximum if integer) of |t_X - t_Y|
+dts_X:      4
+# maximum Y relative error
+emax:       0.35
+# true if to estimate effective masses
+effmass:    true
+# true if to estimate 3pt & 2pt ratios
+ratio:      false
+# true / false if treat all / no data as 2pt data; or a string of 2pt data identifier
+is2pt:      true
+# for 'inconventional' complex data set that happens to be the first entry as imaginary part (and the second as real), set this to true! 
+reverse: true
