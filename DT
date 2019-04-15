@@ -1,0 +1,7 @@
+#Decision Tree parameters
+# function to measure the quality of split
+criterion: sme
+# minimum number of samples required to split
+min_samples_split: 3
+# maximum depth of tree (optional)
+max_depth: 500
