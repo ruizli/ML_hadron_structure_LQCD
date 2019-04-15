@@ -4,7 +4,7 @@ Machine learning application to LQCD data
 Python 3.7 version
 
 Dependencies: 
- numpy, pandas, matplotlib, seaborn, scikit-learn 
+ numpy, pandas, matplotlib, seaborn, scikit-learn. 
  See the instruction of each package for installation information
 
 
