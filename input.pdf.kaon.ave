@@ -1,0 +1,30 @@
+# ML input file
+format: pdf
+ddir: [ /Users/ruizi/Documents/ML/data/pdf/a12m220L/meson/g8.ave , /Users/ruizi/Documents/ML/data/pdf/a12m220L/meson/hadspec2.ave ]
+dfile.x: [ [ m-0.075_m-0.019938, mg5 ], ]
+dfile.y: [ [ g8, m-0.075_im-0.019938 ], ] 
+tdset: CV1
+fixRM: true
+nfit: 8
+ntrn: 100
+nbc: 100
+binsize: 1
+nsrc: 1
+pdir: /Users/ruizi/Documents/ML/params
+odir: /Users/ruizi/Documents/ML/outputs/pdf/meson/ave
+mlml: GB
+analysis: true
+ts_Y:       [ 3 ] 
+dts_X:      3
+effmass:    false
+ratio:      false
+spectrum:
+neg_p_mg5:  false
+operator_Y: [ {g8: mg5} ]
+operator_X: [ [ mg5, g8 ] ]
+momentum_Y: [ 4 ]
+momentum_X: [ { mg5: [3], g8: [3] } ]
+z_Y:        [ 204 ]
+z_X:        [ { mg5: [None], g8: [ 204, 604 ] } ]
+T_Y:        [ 5 ]
+T_X:        [ 5 ]
